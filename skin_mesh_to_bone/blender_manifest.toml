@@ -3,9 +3,9 @@ schema_version = "1.0.0"
 # Example of manifest file for a Blender extension
 # Change the values according to your extension
 id = "skin_mesh_to_bone"
-version = "1.0.0"
+version = "1.0.1"
 name = "Skin Mesh To Bone"
-tagline = "Skins selected meshes to the bone on the active armature"
+tagline = "Skins selected meshes to a bone on the active armature"
 maintainer = "Colin Basnett <cmbasnett@gmail.com>"
 # Supported types: "add-on", "theme"
 type = "add-on"
@@ -15,7 +15,7 @@ website = "https://github.com/DarklightGames/skin_mesh_to_bone/"
 
 # Optional list defined by Blender and server, see:
 # https://docs.blender.org/manual/en/dev/extensions/tags.html
-tags = ["User Interface"]
+tags = ["Rigging"]
 
 blender_version_min = "4.2.0"
 # Optional: maximum supported Blender version
