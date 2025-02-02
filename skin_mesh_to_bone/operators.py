@@ -69,11 +69,11 @@ class SMTB_OT_skin_mesh_to_bone(Operator):
             if self.should_mirror_vertex_groups:
                 mirror_bone = self.bone
                 import re
-                re.sub(r'[._-]([LR])$', '', mirror_bone)
-                if mirror_bone.endswith('L'):
-                    mirror_bone = mirror_bone[:-1] + 'R'
-                elif mirror_bone.endswith('R'):
-                    mirror_bone = mirror_bone[:-1] + 'L'
+                if re.search(r'[._-]([LR])$', mirror_bone):
+                    if mirror_bone.endswith('L'):
+                        mirror_bone = mirror_bone[:-1] + 'R'
+                    elif mirror_bone.endswith('R'):
+                        mirror_bone = mirror_bone[:-1] + 'L'
 
                 # Create the mirror vertex group if it doesn't exist.
                 mirror_vertex_group = bpy_object.vertex_groups.get(mirror_bone, None)
